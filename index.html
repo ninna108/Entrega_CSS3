@@ -8,6 +8,7 @@
   <script src="js/script.js" defer></script>
 </head>
 <body>
+  <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="logo">InovaTech</div>
     <nav class="menu">
@@ -30,37 +31,59 @@
     </div>
   </header>
 
+  <!-- ===== HERO ===== -->
   <section class="hero">
     <h1>Construindo Interfaces Web Modernas</h1>
     <p>Experiências práticas com CSS3 e layouts responsivos</p>
-    <button class="btn">Saiba Mais</button>
+    <button class="btn btn-primary" id="openModal">Saiba Mais</button>
   </section>
 
+  <!-- ===== GRID DE CONTEÚDO ===== -->
   <section class="cards-grid">
     <div class="card">
-      <h3>Design Responsivo</h3>
-      <p>Utilizando CSS Grid e Flexbox para layouts modernos.</p>
+      <h3>Design Responsivo <span class="badge">Novo</span></h3>
+      <p>Layouts modernos com Grid e Flexbox totalmente adaptáveis.</p>
     </div>
     <div class="card">
       <h3>Design System</h3>
-      <p>Paleta de cores, tipografia e espaçamento consistentes.</p>
+      <p>Paleta, tipografia e espaçamento consistentes em toda a interface.</p>
     </div>
     <div class="card">
       <h3>Interatividade</h3>
       <p>Menus dropdown, animações suaves e navegação intuitiva.</p>
     </div>
+    <div class="card success">
+      <h3>Validação Visual</h3>
+      <p>Feedback visual e validação em formulários com CSS3 puro.</p>
+    </div>
   </section>
 
+  <!-- ===== ALERTA ===== -->
+  <div class="alert success">
+    💡 Dica: clique no botão "Saiba Mais" para ver o modal em ação.
+  </div>
+
+  <!-- ===== FORMULÁRIO ===== -->
   <section class="form-section">
     <h2>Entre em Contato</h2>
     <form>
       <input type="text" placeholder="Seu nome" required>
       <input type="email" placeholder="Seu email" required>
-      <textarea placeholder="Sua mensagem"></textarea>
-      <button type="submit" class="btn">Enviar</button>
+      <textarea placeholder="Sua mensagem" required></textarea>
+      <button type="submit" class="btn btn-secondary">Enviar</button>
     </form>
   </section>
 
+  <!-- ===== MODAL ===== -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>CSS3 na Prática</h2>
+      <p>Este projeto demonstra como aplicar Design System, Flexbox e Grid para criar interfaces modernas, acessíveis e responsivas.</p>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
   <footer>
     <p>© 2025 InovaTech - Todos os direitos reservados.</p>
   </footer>
