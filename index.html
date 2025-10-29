@@ -1,91 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Entrega II – CSS3 Moderno</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RPGs do Cellbit — Ordem Paranormal</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-    <div class="logo">InovaTech</div>
-    <nav class="menu">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li class="dropdown">
-          <a href="#">Serviços</a>
-          <ul class="submenu">
-            <li><a href="#">Consultoria</a></li>
-            <li><a href="#">Design Web</a></li>
-            <li><a href="#">Sustentabilidade</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Ordem Paranormal</a>
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li class="has-submenu" aria-haspopup="true">
+            <a href="#campanhas" aria-expanded="false">Campanhas ▾</a>
+            <ul class="submenu" aria-label="submenu campanhas">
+              <li><a href="#camp1">Campanha 1</a></li>
+              <li><a href="#camp2">Campanha 2</a></li>
+              <li><a href="#spin">Spin-offs</a></li>
+            </ul>
+          </li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <h1>Construindo Interfaces Web Modernas</h1>
-    <p>Experiências práticas com CSS3 e layouts responsivos</p>
-    <button class="btn btn-primary" id="openModal">Saiba Mais</button>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="container grid grid-12">
+        <div class="col-7 hero-content">
+          <h1>Universo <span class="accent">Ordem Paranormal</span></h1>
+          <p class="lead">Exploração, mistério e RPGs ao vivo criados por Cellbit — resumos das campanhas, personagens e produtos oficiais.</p>
+          <div class="badges">
+            <span class="badge">RPG</span>
+            <span class="badge">Ordem Paranormal</span>
+            <span class="badge neutral">Campanhas</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn primary" href="#campanhas">Ver Campanhas</a>
+            <button class="btn outline" id="openModal">Assista ao trailer</button>
+          </div>
+        </div>
+        <div class="col-5 hero-media">
+          <div class="card media-card">
+            <svg viewBox="0 0 400 250" class="cover" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração Ordem Paranormal">
+              <rect width="100%" height="100%" rx="8" fill="#eef2ff"></rect>
+              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="#0f172a">Ilustração — Ordem Paranormal</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- ===== GRID DE CONTEÚDO ===== -->
-  <section class="cards-grid">
-    <div class="card">
-      <h3>Design Responsivo <span class="badge">Novo</span></h3>
-      <p>Layouts modernos com Grid e Flexbox totalmente adaptáveis.</p>
-    </div>
-    <div class="card">
-      <h3>Design System</h3>
-      <p>Paleta, tipografia e espaçamento consistentes em toda a interface.</p>
-    </div>
-    <div class="card">
-      <h3>Interatividade</h3>
-      <p>Menus dropdown, animações suaves e navegação intuitiva.</p>
-    </div>
-    <div class="card success">
-      <h3>Validação Visual</h3>
-      <p>Feedback visual e validação em formulários com CSS3 puro.</p>
-    </div>
-  </section>
+    <section id="sobre" class="section container">
+      <h2>Sobre</h2>
+      <p>Ordem Paranormal é o universo ficcional que cresceu a partir das mesas de RPG transmitidas por Cellbit. Aqui reunimos descrições, cards de personagens e recursos para jogadores.</p>
+      <div class="grid grid-12 cards-row">
+        <article class="card col-4">
+          <h3>História</h3>
+          <p>Resumo do universo, linhas de tempo e eventos principais.</p>
+          <a class="link" href="#historia">Ler mais →</a>
+        </article>
+        <article class="card col-4">
+          <h3>Personagens</h3>
+          <p>Perfis, fichas e curiosidades dos personagens mais icônicos.</p>
+          <a class="link" href="#personagens">Ler mais →</a>
+        </article>
+        <article class="card col-4">
+          <h3>Produtos</h3>
+          <p>Livros, RPG físico/digital e o jogo 'Enigma do Medo'.</p>
+          <a class="link" href="#produtos">Ler mais →</a>
+        </article>
+      </div>
+    </section>
 
-  <!-- ===== ALERTA ===== -->
-  <div class="alert success">
-    💡 Dica: clique no botão "Saiba Mais" para ver o modal em ação.
-  </div>
+    <section id="campanhas" class="section alt container">
+      <h2>Campanhas</h2>
+      <div class="grid grid-12">
+        <div class="col-8">
+          <div class="card">
+            <h3>Campanha Principal</h3>
+            <p>Detalhes, episódios e cronograma das sessões.</p>
+            <div class="meta">
+              <span class="tag">Principal</span>
+              <span class="tag neutral">Terror</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Spin-offs</h3>
+            <p>Campanhas paralelas e histórias alternativas ambientadas no mesmo universo.</p>
+          </div>
+        </div>
+        <aside class="col-4">
+          <div class="card sticky">
+            <h4>Último episódio</h4>
+            <p>Resumo rápido e links para assistir à gravação.</p>
+            <button class="btn primary small" id="toastBtn">Notificar-me</button>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-  <!-- ===== FORMULÁRIO ===== -->
-  <section class="form-section">
-    <h2>Entre em Contato</h2>
-    <form>
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu email" required>
-      <textarea placeholder="Sua mensagem" required></textarea>
-      <button type="submit" class="btn btn-secondary">Enviar</button>
-    </form>
-  </section>
+    <section id="galeria" class="section container">
+      <h2>Galeria</h2>
+      <div class="grid grid-12 gallery">
+        <div class="col-3">
+          <div class="media-thumb card">Imagem 1</div>
+        </div>
+        <div class="col-3">
+          <div class="media-thumb card">Imagem 2</div>
+        </div>
+        <div class="col-3">
+          <div class="media-thumb card">Imagem 3</div>
+        </div>
+        <div class="col-3">
+          <div class="media-thumb card">Imagem 4</div>
+        </div>
+      </div>
+    </section>
 
-  <!-- ===== MODAL ===== -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <h2>CSS3 na Prática</h2>
-      <p>Este projeto demonstra como aplicar Design System, Flexbox e Grid para criar interfaces modernas, acessíveis e responsivas.</p>
+    <section id="contato" class="section container">
+      <h2>Contato & Formulário</h2>
+      <form id="contactForm" class="form card" novalidate>
+        <div class="form-row">
+          <label for="name">Nome</label>
+          <input id="name" name="name" required minlength="2" placeholder="Seu nome">
+          <div class="invalid-msg" data-for="name"></div>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
+          <div class="invalid-msg" data-for="email"></div>
+        </div>
+        <div class="form-row">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" required minlength="10" placeholder="Escreva aqui..."></textarea>
+          <div class="invalid-msg" data-for="message"></div>
+        </div>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Enviar</button>
+          <button class="btn outline" type="reset">Limpar</button>
+        </div>
+        <div id="formFeedback" class="feedback" aria-live="polite"></div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Projeto de demonstração — Entrega II • Experiências Práticas — CSS3</p>
+      <p>Instruções: faça o upload em um repositório público no GitHub e ative GitHub Pages para publicação.</p>
     </div>
-  </div>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>© 2025 InovaTech - Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" id="closeModal" aria-label="Fechar modal">✕</button>
+      <h3>Trailer — Ordem Paranormal</h3>
+      <p>Vídeo/trailer fictício. Substitua por embed real de YouTube ou Twitch quando publicar.</p>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
