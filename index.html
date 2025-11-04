@@ -13,37 +13,32 @@
 <body>
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
-  <div class="container header-inner">
-    <a class="brand" href="#inicio">Ordem Paranormal</a>
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">Ordem Paranormal</a>
 
-    <!-- Navegação principal -->
-    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
+      <!-- Navegação principal -->
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li class="has-submenu" id="campanhasItem">
+            <a href="#campanhas" class="parent-link" aria-haspopup="true" aria-expanded="false">Campanhas ▾</a>
+            <ul class="submenu" role="menu" aria-label="submenu campanhas">
+              <li role="none"><a role="menuitem" href="#camp1">Campanha 1</a></li>
+              <li role="none"><a role="menuitem" href="#camp2">Campanha 2</a></li>
+              <li role="none"><a role="menuitem" href="#spin">Spin-offs</a></li>
+            </ul>
+          </li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
 
-        <li class="has-submenu" id="campanhasItem">
-          <!-- Parent link: em desktop age como âncora, em mobile o primeiro toque abre submenu -->
-          <a href="#campanhas" class="parent-link" aria-haspopup="true" aria-expanded="false">Campanhas ▾</a>
-
-          <ul class="submenu" role="menu" aria-label="submenu campanhas">
-            <li role="none"><a role="menuitem" href="#camp1">Campanha 1</a></li>
-            <li role="none"><a role="menuitem" href="#camp2">Campanha 2</a></li>
-            <li role="none"><a role="menuitem" href="#spin">Spin-offs</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-
-    <!-- Botão hambúrguer (aparece em telas pequenas) -->
-    <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
+      <!-- Botão hamburguer -->
+      <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
   <!-- HERO -->
   <main>
@@ -119,7 +114,11 @@
     <section id="galeria" class="section container">
       <h2>Galeria</h2>
       <div class="grid grid-12 gallery">
-        <div class="col-3"><div class="media-thumb card">Imagem 1</div></div>
+        <div class="col-3">
+          <div class="media-thumb card">
+            <img src="https://upload.wikimedia.org/wikipedia/pt/a/a2/Capa_de_O_Segredo_Na_Floresta.jpeg" alt="O Segredo na Floresta" class="cover">
+          </div>
+        </div>
         <div class="col-3"><div class="media-thumb card">Imagem 2</div></div>
         <div class="col-3"><div class="media-thumb card">Imagem 3</div></div>
         <div class="col-3"><div class="media-thumb card">Imagem 4</div></div>
