@@ -10,6 +10,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#">Ordem Paranormal</a>
+
       <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
         <ul>
           <li><a href="#sobre">Sobre</a></li>
@@ -38,22 +39,26 @@
         <div class="col-7 hero-content">
           <h1>Universo <span class="accent">Ordem Paranormal</span></h1>
           <p class="lead">Exploração, mistério e RPGs ao vivo criados por Cellbit — resumos das campanhas, personagens e produtos oficiais.</p>
+
           <div class="badges">
             <span class="badge">RPG</span>
             <span class="badge">Ordem Paranormal</span>
             <span class="badge neutral">Campanhas</span>
           </div>
+
           <div class="cta-row">
             <a class="btn primary" href="#campanhas">Ver Campanhas</a>
-            <button class="btn outline" id="openModal">Assista ao trailer</button>
+            <button class="btn outline" id="openModal" type="button">Assista ao trailer</button>
           </div>
         </div>
+
         <div class="col-5 hero-media">
           <div class="card media-card">
-            <svg viewBox="0 0 400 250" class="cover" xmlns="https://i0.wp.com/geekpopnews.com.br/wp-content/uploads/2023/10/ordem-paranormal-cellbit.jpg?fit=1200%2C675&ssl=1" role="img" aria-label="Ilustração Ordem Paranormal">
-              <rect width="100%" height="100%" rx="8" fill="#eef2ff"></rect>
-              <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="#0f172a">Ilustração — Ordem Paranormal</text>
-            </svg>
+            <img
+              src="https://i0.wp.com/geekpopnews.com.br/wp-content/uploads/2023/10/ordem-paranormal-cellbit.jpg?fit=1200%2C675&ssl=1"
+              alt="Ilustração Ordem Paranormal"
+              class="cover"
+            />
           </div>
         </div>
       </div>
@@ -62,20 +67,23 @@
     <section id="sobre" class="section container">
       <h2>Sobre</h2>
       <p>Ordem Paranormal é o universo ficcional que cresceu a partir das mesas de RPG transmitidas por Cellbit. Aqui reunimos descrições, cards de personagens e recursos para jogadores.</p>
+
       <div class="grid grid-12 cards-row">
         <article class="card col-4">
           <h3>História</h3>
           <p>Resumo do universo, linhas de tempo e eventos principais.</p>
           <a class="link" href="#historia">Ler mais →</a>
         </article>
+
         <article class="card col-4">
           <h3>Personagens</h3>
           <p>Perfis, fichas e curiosidades dos personagens mais icônicos.</p>
           <a class="link" href="#personagens">Ler mais →</a>
         </article>
+
         <article class="card col-4">
           <h3>Produtos</h3>
-          <p>Livros, RPG físico/digital e o jogo 'Enigma do Medo'.</p>
+          <p>Livros, RPG físico/digital e o jogo "Enigma do Medo".</p>
           <a class="link" href="#produtos">Ler mais →</a>
         </article>
       </div>
@@ -93,16 +101,18 @@
               <span class="tag neutral">Terror</span>
             </div>
           </div>
+
           <div class="card">
             <h3>Spin-offs</h3>
             <p>Campanhas paralelas e histórias alternativas ambientadas no mesmo universo.</p>
           </div>
         </div>
+
         <aside class="col-4">
           <div class="card sticky">
             <h4>Último episódio</h4>
             <p>Resumo rápido e links para assistir à gravação.</p>
-            <button class="btn primary small" id="toastBtn">Notificar-me</button>
+            <button class="btn primary small" id="toastBtn" type="button">Notificar-me</button>
           </div>
         </aside>
       </div>
@@ -111,18 +121,10 @@
     <section id="galeria" class="section container">
       <h2>Galeria</h2>
       <div class="grid grid-12 gallery">
-        <div class="col-3">
-          <div class="media-thumb card">Imagem 1</div>
-        </div>
-        <div class="col-3">
-          <div class="media-thumb card">Imagem 2</div>
-        </div>
-        <div class="col-3">
-          <div class="media-thumb card">Imagem 3</div>
-        </div>
-        <div class="col-3">
-          <div class="media-thumb card">Imagem 4</div>
-        </div>
+        <div class="col-3"><div class="media-thumb card">Imagem 1</div></div>
+        <div class="col-3"><div class="media-thumb card">Imagem 2</div></div>
+        <div class="col-3"><div class="media-thumb card">Imagem 3</div></div>
+        <div class="col-3"><div class="media-thumb card">Imagem 4</div></div>
       </div>
     </section>
 
@@ -131,33 +133,36 @@
       <form id="contactForm" class="form card" novalidate>
         <div class="form-row">
           <label for="name">Nome</label>
-          <input id="name" name="name" required minlength="2" placeholder="Seu nome">
+          <input id="name" name="name" required minlength="2" placeholder="Seu nome" />
           <div class="invalid-msg" data-for="name"></div>
         </div>
+
         <div class="form-row">
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
+          <input id="email" name="email" type="email" required placeholder="seu@exemplo.com" />
           <div class="invalid-msg" data-for="email"></div>
         </div>
+
         <div class="form-row">
           <label for="message">Mensagem</label>
           <textarea id="message" name="message" required minlength="10" placeholder="Escreva aqui..."></textarea>
           <div class="invalid-msg" data-for="message"></div>
         </div>
+
         <div class="form-actions">
           <button class="btn primary" type="submit">Enviar</button>
           <button class="btn outline" type="reset">Limpar</button>
         </div>
+
         <div id="formFeedback" class="feedback" aria-live="polite"></div>
       </form>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <p>Projeto de demonstração — Entrega II • Experiências Práticas — CSS3</p>
-      <p>Instruções: faça o upload em um repositório público no GitHub e ative GitHub Pages para publicação.</p>
+      <p>Instruções: faça o upload em um repositório público no GitHub e ative o GitHub Pages para publicação.</p>
     </div>
   </footer>
 
