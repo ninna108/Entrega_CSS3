@@ -1,76 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Universo Ordem Paranormal - RPG, mistério e o oculto criados por Cellbit.">
-  <title>Ordem Paranormal | RPG</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RPGs do Cellbit — Ordem Paranormal</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navegação -->
-  <header class="navbar">
-    <div class="logo">Ordem <span>Paranormal</span></div>
+  <!-- ===== Header ===== -->
+  <header class="navbar" id="navbar">
+    <div class="logo">
+      <span class="glow">Ordem</span> Paranormal
+    </div>
     <nav>
       <ul>
-        <li><a href="#inicio">Início</a></li>
+        <li><a href="#inicio" class="active">Início</a></li>
         <li><a href="#universo">Universo</a></li>
         <li><a href="#campanhas">Campanhas</a></li>
         <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="inicio" class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>O <span>Oculto</span> te observa.</h1>
-      <p>Descubra os segredos e horrores que habitam o universo de <strong>Ordem Paranormal RPG</strong>.</p>
-      <a href="#universo" class="btn">Explorar o Mistério</a>
+  <!-- ===== Hero Section ===== -->
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Explore o <span class="accent">Desconhecido</span></h1>
+        <p>O universo sombrio e intrigante de <strong>Ordem Paranormal</strong>, criado por Cellbit.</p>
+        <div class="cta-row">
+          <a href="#campanhas" class="btn primary">Ver Campanhas</a>
+          <button class="btn outline" id="openModal" type="button">Assistir Trailer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Sobre ===== -->
+    <section id="sobre" class="section container">
+      <h2>Sobre</h2>
+      <p>Ordem Paranormal é o universo ficcional que cresceu a partir das mesas de RPG transmitidas por Cellbit. Aqui reunimos descrições, cards de personagens e recursos para jogadores.</p>
+
+      <div class="grid cards-row">
+        <article class="card">
+          <h3>História</h3>
+          <p>Resumo do universo, linhas de tempo e eventos principais.</p>
+          <a class="link" href="#historia">Ler mais →</a>
+        </article>
+
+        <article class="card">
+          <h3>Personagens</h3>
+          <p>Perfis, fichas e curiosidades dos personagens mais icônicos.</p>
+          <a class="link" href="#personagens">Ler mais →</a>
+        </article>
+
+        <article class="card">
+          <h3>Produtos</h3>
+          <p>Livros, RPG físico/digital e o jogo "Enigma do Medo".</p>
+          <a class="link" href="#produtos">Ler mais →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Campanhas ===== -->
+    <section id="campanhas" class="section alt container">
+      <h2>Campanhas</h2>
+      <div class="grid">
+        <div>
+          <div class="card">
+            <h3>Campanha Principal</h3>
+            <p>Detalhes, episódios e cronograma das sessões.</p>
+            <div class="meta">
+              <span class="tag">Principal</span>
+              <span class="tag neutral">Terror</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Spin-offs</h3>
+            <p>Campanhas paralelas e histórias alternativas ambientadas no mesmo universo.</p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card sticky">
+            <h4>Último episódio</h4>
+            <p>Resumo rápido e links para assistir à gravação.</p>
+            <button class="btn primary small" id="toastBtn" type="button">Notificar-me</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== Contato ===== -->
+    <section id="contato" class="section container">
+      <h2>Contato</h2>
+      <form id="contactForm" class="form card" novalidate>
+        <div class="form-row">
+          <label for="name">Nome</label>
+          <input id="name" name="name" required minlength="2" placeholder="Seu nome" />
+          <div class="invalid-msg" data-for="name"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="seu@exemplo.com" />
+          <div class="invalid-msg" data-for="email"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" required minlength="10" placeholder="Escreva aqui..."></textarea>
+          <div class="invalid-msg" data-for="message"></div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Enviar</button>
+          <button class="btn outline" type="reset">Limpar</button>
+        </div>
+
+        <div id="formFeedback" class="feedback" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 • Projeto “Ordem Paranormal” — Experiências Práticas CSS3</p>
     </div>
-  </section>
-
-  <!-- Universo -->
-  <section id="universo" class="section">
-    <h2>O Universo</h2>
-    <p>Um mundo onde o medo alimenta o paranormal. Criado por Cellbit, Ordem Paranormal une mistério, horror e narrativa em um RPG envolvente que transcende o imaginário.</p>
-  </section>
-
-  <!-- Campanhas -->
-  <section id="campanhas" class="section dark">
-    <h2>Campanhas Icônicas</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="img/ordem_paranormal_orig.jpg" alt="Campanha Ordem Paranormal Original">
-        <h3>Ordem Paranormal</h3>
-        <p>A origem do universo paranormal. O despertar do medo.</p>
-      </div>
-      <div class="card">
-        <img src="img/segredo_na_floresta.jpg" alt="Campanha Segredo na Floresta">
-        <h3>O Segredo na Floresta</h3>
-        <p>Um grupo de jovens é arrastado para o desconhecido em busca de respostas.</p>
-      </div>
-      <div class="card">
-        <img src="img/desconjuracao.jpg" alt="Campanha Desconjuração">
-        <h3>Desconjuração</h3>
-        <p>O destino da humanidade depende de desvendar o paranormal antes que seja tarde.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sobre -->
-  <section id="sobre" class="section">
-    <h2>Sobre o Projeto</h2>
-    <p>Este site foi criado como parte de um estudo sobre design web moderno e otimização visual. Inspirado em <em>Ordem Paranormal</em>, busca transmitir a atmosfera de mistério e tensão do universo de RPG criado por Cellbit.</p>
-  </section>
-
-  <!-- Rodapé -->
-  <footer class="footer">
-    <p>© 2025 Universo Ordem Paranormal | Criado por Ninna</p>
   </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" id="closeModal" aria-label="Fechar modal">✕</button>
+      <h3>Trailer — Ordem Paranormal</h3>
+      <p>Vídeo fictício. Substitua por embed do YouTube ao publicar.</p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
