@@ -13,32 +13,37 @@
 <body>
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio">Ordem Paranormal</a>
+  <div class="container header-inner">
+    <a class="brand" href="#inicio">Ordem Paranormal</a>
 
-      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
+    <!-- Navegação principal -->
+    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
 
-          <li class="has-submenu" id="campanhasItem">
-            <a href="#campanhas" aria-haspopup="true" aria-expanded="false">Campanhas ▾</a>
-            <ul class="submenu" aria-label="submenu campanhas">
-              <li><a href="#camp1">Campanha 1</a></li>
-              <li><a href="#camp2">Campanha 2</a></li>
-              <li><a href="#spin">Spin-offs</a></li>
-            </ul>
-          </li>
+        <li class="has-submenu" id="campanhasItem">
+          <!-- Parent link: em desktop age como âncora, em mobile o primeiro toque abre submenu -->
+          <a href="#campanhas" class="parent-link" aria-haspopup="true" aria-expanded="false">Campanhas ▾</a>
 
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+          <ul class="submenu" role="menu" aria-label="submenu campanhas">
+            <li role="none"><a role="menuitem" href="#camp1">Campanha 1</a></li>
+            <li role="none"><a role="menuitem" href="#camp2">Campanha 2</a></li>
+            <li role="none"><a role="menuitem" href="#spin">Spin-offs</a></li>
+          </ul>
+        </li>
 
-      <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botão hambúrguer (aparece em telas pequenas) -->
+    <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
 
   <!-- HERO -->
   <main>
