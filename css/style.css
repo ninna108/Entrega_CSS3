@@ -134,29 +134,30 @@ body{
   transition:all .28s;
 }
 
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-  background:url('https://i.imgur.com/f7uhVao.jpeg') center/cover no-repeat;
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('https://i0.wp.com/geekpopnews.com.br/wp-content/uploads/2023/10/ordem-paranormal-cellbit.jpg?fit=1200%2C675&ssl=1')
+              center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at 50% 55%, rgba(0,0,0,0.45), rgba(0,0,0,0.9));
-  z-index:1;
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 55%, rgba(0,0,0,0.45), rgba(0,0,0,0.9));
+  z-index: 1;
 }
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:900px;
-  padding:2rem;
-  animation:fadeUp .9s ease both;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem;
+  animation: fadeUp .9s ease both;
 }
+
 .hero h1{
   font-family:"Cinzel Decorative",serif;
   font-size:3rem;
