@@ -1,41 +1,74 @@
-/* ===== Estilo Global ===== */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== BASE ===== */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #0a0a0f;
-  color: #ddd;
+  color: #e2e2e2;
   line-height: 1.6;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* ===== Navbar ===== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+a {
+  color: #b366ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  color: #d1a3ff;
+}
+
+/* ===== HEADER ===== */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   background: rgba(5, 5, 10, 0.9);
   backdrop-filter: blur(10px);
+  border-bottom: 2px solid transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1.2rem 3rem;
   z-index: 1000;
+  transition: all 0.4s ease;
+}
+.navbar.scrolled {
+  background: rgba(10, 10, 15, 0.95);
+  padding: 0.8rem 2.5rem;
+  border-bottom: 2px solid rgba(138, 43, 226, 0.3);
 }
 
 .logo {
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #fff;
-  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-
-.logo span {
-  color: #8a2be2;
+.logo .glow {
+  color: #b366ff;
+  text-shadow: 0 0 10px #b366ff, 0 0 25px #8a2be2;
+  animation: glowPulse 2.5s infinite alternate;
+}
+@keyframes glowPulse {
+  from { text-shadow: 0 0 5px #8a2be2, 0 0 10px #6b21a8; }
+  to { text-shadow: 0 0 15px #b366ff, 0 0 30px #c084fc; }
 }
 
 .navbar ul {
@@ -43,141 +76,150 @@ body {
   display: flex;
   gap: 1.5rem;
 }
-
 .navbar a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s;
+  color: #cfc9e6;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #6b21a8, #b366ff);
+  transition: width 0.3s ease;
+}
+.navbar a:hover::after {
+  width: 100%;
+}
+.navbar a.active {
+  color: #b366ff;
+}
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b366ff, transparent);
+  opacity: 0.4;
+  animation: lineGlow 3s linear infinite;
+}
+@keyframes lineGlow {
+  0%,100% { opacity: 0.3; filter: blur(1px); }
+  50% { opacity: 1; filter: blur(2px); }
 }
 
-.navbar a:hover {
-  color: #8a2be2;
-}
-
-/* ===== Hero Section ===== */
+/* ===== HERO ===== */
 .hero {
   position: relative;
   height: 100vh;
-  background: url("../img/ordem-paranormal-hero.jpg") center/cover no-repeat;
+  background: url("https://i0.wp.com/geekpopnews.com.br/wp-content/uploads/2023/10/ordem-paranormal-cellbit.jpg?fit=1200%2C675&ssl=1")
+    center/cover no-repeat;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 0 20px;
-  color: white;
 }
-
-.hero .overlay {
+.hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(10, 0, 20, 0.9));
+  background: radial-gradient(circle at center, rgba(0,0,0,0.4), rgba(0,0,0,0.95));
 }
-
 .hero-content {
   position: relative;
-  z-index: 1;
-  max-width: 700px;
-  animation: fadeIn 2s ease forwards;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero h1 span {
-  color: #b366ff;
-}
-
-.hero p {
-  margin-bottom: 1.5rem;
-  font-weight: 300;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background: #8a2be2;
+  z-index: 10;
   color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s;
+  max-width: 700px;
+  padding: 2rem;
 }
-
-.btn:hover {
-  background: #6f22b7;
+.hero h1 {
+  font-size: 2.8rem;
+  text-shadow: 0 0 20px #6b21a8;
 }
-
-/* ===== Seções ===== */
-.section {
-  padding: 100px 10%;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 2rem;
+.hero .accent {
   color: #b366ff;
-  margin-bottom: 20px;
 }
-
-.section.dark {
-  background: #12121a;
-}
-
-/* ===== Cards ===== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+.cta-row {
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.card {
-  background: #1a1a24;
-  border-radius: 10px;
-  padding: 1rem;
-  transition: transform 0.4s, box-shadow 0.4s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
-}
-
-.card img {
-  width: 100%;
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 0.8rem 1.5rem;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  border: 2px solid #b366ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn.primary {
+  background: #b366ff;
+  color: #0a0a0f;
+}
+.btn.primary:hover {
+  background: #8a2be2;
+}
+.btn.outline {
+  background: transparent;
+  color: #b366ff;
+}
+.btn.outline:hover {
+  background: rgba(179, 102, 255, 0.1);
 }
 
-/* ===== Footer ===== */
-.footer {
-  background: #050509;
+/* ===== SECTIONS ===== */
+.section {
+  padding: 6rem 0;
+}
+.alt {
+  background: #111118;
+}
+.card {
+  background: rgba(20, 20, 30, 0.8);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #b366ff;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+.link {
+  color: #b366ff;
+  font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
   text-align: center;
-  padding: 1.5rem;
-  color: #777;
-  font-size: 0.9rem;
+  padding: 2rem;
+  background: #050509;
+  border-top: 1px solid rgba(138, 43, 226, 0.2);
+  color: #b3b3b3;
 }
 
-/* ===== Animações ===== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== Responsividade ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
   .navbar {
     flex-direction: column;
-    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+  }
+  .navbar ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
   }
 }
