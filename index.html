@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
@@ -23,9 +24,9 @@
           <li class="has-submenu" id="campanhasItem">
             <a href="#campanhas" class="parent-link" aria-haspopup="true" aria-expanded="false">Campanhas ▾</a>
             <ul class="submenu" role="menu" aria-label="submenu campanhas">
-              <li role="none"><a role="menuitem" href="#camp1">Campanha 1</a></li>
-              <li role="none"><a role="menuitem" href="#camp2">Campanha 2</a></li>
-              <li role="none"><a role="menuitem" href="#spin">Spin-offs</a></li>
+              <li role="none"><a role="menuitem" href="#camp1">O Segredo na Floresta</a></li>
+              <li role="none"><a role="menuitem" href="#camp2">O Segredo na Ilha</a></li>
+              <li role="none"><a role="menuitem" href="#spin">Desconjuração</a></li>
             </ul>
           </li>
           <li><a href="#galeria">Galeria</a></li>
@@ -43,13 +44,13 @@
   <!-- HERO -->
   <main>
     <section id="inicio" class="hero">
-      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-overlay"></div>
       <div class="hero-content container">
         <h1>Universo <span class="accent">Ordem Paranormal</span></h1>
-        <p class="lead">Exploração, mistério e RPGs ao vivo criados por <strong>Cellbit</strong> — resumos das campanhas, personagens e recursos para jogadores.</p>
+        <p class="lead">Mistério, investigação e horror psicológico em um universo criado por <strong>Cellbit</strong>.</p>
         <div class="cta-row">
           <a class="btn primary" href="#campanhas">Ver Campanhas</a>
-          <button class="btn outline" id="openModal" type="button">Assista ao trailer</button>
+          <button class="btn outline" id="openModal" type="button">Assistir Trailer</button>
         </div>
       </div>
     </section>
@@ -57,24 +58,24 @@
     <!-- SOBRE -->
     <section id="sobre" class="section container">
       <h2>Sobre</h2>
-      <p>Ordem Paranormal é o universo ficcional que cresceu a partir das mesas de RPG transmitidas por Cellbit. Aqui reunimos descrições, cards de personagens e recursos para jogadores.</p>
+      <p>Ordem Paranormal é um universo de RPG criado por Cellbit, que mistura investigação e terror psicológico. Explore histórias, personagens e os produtos inspirados nesse mundo sombrio.</p>
 
       <div class="grid grid-12 cards-row">
-        <article class="card col-4">
+        <article class="card col-4 label">
           <h3>História</h3>
-          <p>Resumo do universo, linhas de tempo e eventos principais.</p>
+          <p>Descubra a cronologia, eventos e segredos por trás do Outro Lado.</p>
           <a class="link" href="#historia">Ler mais →</a>
         </article>
 
-        <article class="card col-4">
+        <article class="card col-4 label">
           <h3>Personagens</h3>
-          <p>Perfis, fichas e curiosidades dos personagens mais icônicos.</p>
+          <p>Conheça os protagonistas e antagonistas marcantes de cada campanha.</p>
           <a class="link" href="#personagens">Ler mais →</a>
         </article>
 
-        <article class="card col-4">
+        <article class="card col-4 label">
           <h3>Produtos</h3>
-          <p>Livros, RPG físico/digital e o jogo "Enigma do Medo".</p>
+          <p>Explore os livros, o RPG físico e o jogo <em>Enigma do Medo</em>.</p>
           <a class="link" href="#produtos">Ler mais →</a>
         </article>
       </div>
@@ -86,70 +87,50 @@
       <div class="grid grid-12">
         <div class="col-8">
           <div class="card">
-            <h3 id="camp1">Campanha Principal</h3>
-            <p>Detalhes, episódios e cronograma das sessões.</p>
-            <div class="meta">
-              <span class="tag">Principal</span>
-              <span class="tag neutral">Terror</span>
-            </div>
+            <h3 id="camp1">O Segredo na Floresta</h3>
+            <p>A primeira grande campanha — uma jornada repleta de mistérios e segredos sombrios.</p>
           </div>
 
           <div class="card">
-            <h3 id="camp2">Spin-offs & Arcos</h3>
-            <p>Campanhas paralelas e histórias alternativas ambientadas no mesmo universo.</p>
+            <h3 id="camp2">O Segredo na Ilha</h3>
+            <p>Uma nova investigação em um ambiente isolado, onde o verdadeiro inimigo pode estar mais perto do que parece.</p>
           </div>
         </div>
 
         <aside class="col-4">
           <div class="card sticky">
             <h4>Último episódio</h4>
-            <p>Resumo rápido e links para assistir à gravação.</p>
+            <p>Resumo do episódio mais recente e link para assistir.</p>
             <button class="btn primary small" id="toastBtn" type="button">Notificar-me</button>
           </div>
         </aside>
       </div>
     </section>
 
-    <!-- GALERIA (corrigida e alinhada) -->
+    <!-- GALERIA -->
     <section id="galeria" class="section container">
       <h2>Galeria</h2>
       <div class="grid grid-12 gallery">
-        <div class="col-3">
-          <div class="media-thumb card">
-            <img src="https://upload.wikimedia.org/wikipedia/pt/a/a2/Capa_de_O_Segredo_Na_Floresta.jpeg" alt="O Segredo na Floresta" class="gallery-img">
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="media-thumb card">
-            <img src="https://i1.sndcdn.com/artworks-wQFRdSd4xdoGCRre-3A27KA-t1080x1080.jpg" alt="O Segredo na Ilha" class="gallery-img">
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="media-thumb card">
-            <img src="https://pbs.twimg.com/media/Ewoc3XfWQAI7tLS.jpg" alt="Desconjuração" class="gallery-img">
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="media-thumb card">
-            <img src="https://pt.quizur.com/_image?href=https://img.quizur.com/f/img63f1708bd8ed03.30805727.png?lastEdited=1676767381&w=1024&h=1024&f=webp" alt="Sinais do Outro Lado" class="gallery-img">
-          </div>
-        </div>
+        <div class="col-3"><div class="media-thumb card"><img src="https://upload.wikimedia.org/wikipedia/pt/a/a2/Capa_de_O_Segredo_Na_Floresta.jpeg" alt="O Segredo na Floresta" class="gallery-img"></div></div>
+        <div class="col-3"><div class="media-thumb card"><img src="https://static.wikia.nocookie.net/ordemparanormal/images/6/63/T%C3%ADtulo_O_Segredo_na_Ilha.jpg/revision/latest?cb=20250824013117&path-prefix=pt-br" alt="O Segredo na Ilha" class="gallery-img"></div></div>
+        <div class="col-3"><div class="media-thumb card"><img src="https://pbs.twimg.com/media/Ewoc3XfWQAI7tLS.jpg" alt="Desconjuração" class="gallery-img"></div></div>
+        <div class="col-3"><div class="media-thumb card"><img src="https://pt.quizur.com/_image?href=https://img.quizur.com/f/img63f1708bd8ed03.30805727.png?lastEdited=1676767381&w=1024&h=1024&f=webp" alt="Sinais do Outro Lado" class="gallery-img"></div></div>
       </div>
     </section>
 
     <!-- CONTATO -->
     <section id="contato" class="section container">
-      <h2>Contato & Formulário</h2>
+      <h2>Contato</h2>
       <form id="contactForm" class="form card" novalidate>
         <div class="form-row">
           <label for="name">Nome</label>
-          <input id="name" name="name" required minlength="2" placeholder="Seu nome" />
+          <input id="name" name="name" required minlength="2" placeholder="Seu nome">
           <div class="invalid-msg" data-for="name"></div>
         </div>
 
         <div class="form-row">
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="seu@exemplo.com" />
+          <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
           <div class="invalid-msg" data-for="email"></div>
         </div>
 
