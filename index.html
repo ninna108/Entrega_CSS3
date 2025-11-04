@@ -4,58 +4,75 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>RPGs do Cellbit — Ordem Paranormal</title>
+  <meta name="description" content="Ordem Paranormal — Universo de RPG, horror investigativo criado por Cellbit.">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ===== Header ===== -->
-  <header class="navbar" id="navbar">
-    <div class="logo">
-      <span class="glow">Ordem</span> Paranormal
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">Ordem Paranormal</a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+
+          <li class="has-submenu" id="campanhasItem">
+            <a href="#campanhas" aria-haspopup="true" aria-expanded="false">Campanhas ▾</a>
+            <ul class="submenu" aria-label="submenu campanhas">
+              <li><a href="#camp1">Campanha 1</a></li>
+              <li><a href="#camp2">Campanha 2</a></li>
+              <li><a href="#spin">Spin-offs</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button id="hamburger" class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#inicio" class="active">Início</a></li>
-        <li><a href="#universo">Universo</a></li>
-        <li><a href="#campanhas">Campanhas</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- ===== Hero Section ===== -->
+  <!-- HERO -->
   <main>
-    <section class="hero" id="inicio">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1>Explore o <span class="accent">Desconhecido</span></h1>
-        <p>O universo sombrio e intrigante de <strong>Ordem Paranormal</strong>, criado por Cellbit.</p>
+    <section id="inicio" class="hero">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <h1>Universo <span class="accent">Ordem Paranormal</span></h1>
+        <p class="lead">Exploração, mistério e RPGs ao vivo criados por <strong>Cellbit</strong> — resumos das campanhas, personagens e recursos para jogadores.</p>
         <div class="cta-row">
-          <a href="#campanhas" class="btn primary">Ver Campanhas</a>
-          <button class="btn outline" id="openModal" type="button">Assistir Trailer</button>
+          <a class="btn primary" href="#campanhas">Ver Campanhas</a>
+          <button class="btn outline" id="openModal" type="button">Assista ao trailer</button>
         </div>
       </div>
     </section>
 
-    <!-- ===== Sobre ===== -->
+    <!-- SOBRE -->
     <section id="sobre" class="section container">
       <h2>Sobre</h2>
       <p>Ordem Paranormal é o universo ficcional que cresceu a partir das mesas de RPG transmitidas por Cellbit. Aqui reunimos descrições, cards de personagens e recursos para jogadores.</p>
 
-      <div class="grid cards-row">
-        <article class="card">
+      <div class="grid grid-12 cards-row">
+        <article class="card col-4">
           <h3>História</h3>
           <p>Resumo do universo, linhas de tempo e eventos principais.</p>
           <a class="link" href="#historia">Ler mais →</a>
         </article>
 
-        <article class="card">
+        <article class="card col-4">
           <h3>Personagens</h3>
           <p>Perfis, fichas e curiosidades dos personagens mais icônicos.</p>
           <a class="link" href="#personagens">Ler mais →</a>
         </article>
 
-        <article class="card">
+        <article class="card col-4">
           <h3>Produtos</h3>
           <p>Livros, RPG físico/digital e o jogo "Enigma do Medo".</p>
           <a class="link" href="#produtos">Ler mais →</a>
@@ -63,13 +80,13 @@
       </div>
     </section>
 
-    <!-- ===== Campanhas ===== -->
+    <!-- CAMPANHAS -->
     <section id="campanhas" class="section alt container">
       <h2>Campanhas</h2>
-      <div class="grid">
-        <div>
+      <div class="grid grid-12">
+        <div class="col-8">
           <div class="card">
-            <h3>Campanha Principal</h3>
+            <h3 id="camp1">Campanha Principal</h3>
             <p>Detalhes, episódios e cronograma das sessões.</p>
             <div class="meta">
               <span class="tag">Principal</span>
@@ -78,12 +95,12 @@
           </div>
 
           <div class="card">
-            <h3>Spin-offs</h3>
+            <h3 id="camp2">Spin-offs & Arcos</h3>
             <p>Campanhas paralelas e histórias alternativas ambientadas no mesmo universo.</p>
           </div>
         </div>
 
-        <aside>
+        <aside class="col-4">
           <div class="card sticky">
             <h4>Último episódio</h4>
             <p>Resumo rápido e links para assistir à gravação.</p>
@@ -93,9 +110,20 @@
       </div>
     </section>
 
-    <!-- ===== Contato ===== -->
+    <!-- GALERIA -->
+    <section id="galeria" class="section container">
+      <h2>Galeria</h2>
+      <div class="grid grid-12 gallery">
+        <div class="col-3"><div class="media-thumb card">Imagem 1</div></div>
+        <div class="col-3"><div class="media-thumb card">Imagem 2</div></div>
+        <div class="col-3"><div class="media-thumb card">Imagem 3</div></div>
+        <div class="col-3"><div class="media-thumb card">Imagem 4</div></div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
     <section id="contato" class="section container">
-      <h2>Contato</h2>
+      <h2>Contato & Formulário</h2>
       <form id="contactForm" class="form card" novalidate>
         <div class="form-row">
           <label for="name">Nome</label>
@@ -125,23 +153,24 @@
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 • Projeto “Ordem Paranormal” — Experiências Práticas CSS3</p>
+      <p>Projeto de demonstração — Entrega II • Experiências Práticas — CSS3</p>
     </div>
   </footer>
 
-  <!-- Modal -->
+  <!-- MODAL -->
   <div id="modal" class="modal" aria-hidden="true">
     <div class="modal-content" role="dialog" aria-modal="true">
       <button class="modal-close" id="closeModal" aria-label="Fechar modal">✕</button>
       <h3>Trailer — Ordem Paranormal</h3>
-      <p>Vídeo fictício. Substitua por embed do YouTube ao publicar.</p>
+      <p>Vídeo/trailer fictício. Substitua por embed real de YouTube ou Twitch quando publicar.</p>
     </div>
   </div>
 
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <!-- TOAST -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
   <script src="js/main.js"></script>
 </body>
